@@ -1,0 +1,343 @@
+.accessibility {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-image: url("@/assets/img/AccessibilityBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #0f0f0f;
+}
+
+.pin-spacer-accessAnimation {
+  background-color: #0f0f0f;
+}
+
+.accessibility::before {
+  content: "";
+  background: radial-gradient(
+    174.5% 89.33% at 51.05% 60.09%,
+    #0f0f0f 23.56%,
+    rgba(15, 15, 15, 0) 100%
+  );
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: -45px;
+  right: 0;
+  z-index: 33;
+}
+
+.accessibility::after {
+  content: "";
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #0f0f0f 49.52%);
+  transform: rotate(180deg);
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 33;
+}
+
+.accessibilityTexts {
+  padding-top: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.accessibilityTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "TeX Gyre Adventor";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 96px; /* 100% */
+  width: 100%;
+  max-width: 946px;
+}
+
+.accessibilityCards {
+  display: flex;
+  gap: 32px;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.accessibilityCard {
+  padding: 8px 8px 20px 8px;
+  align-items: center;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 320px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(21.147891998291016px);
+  opacity: 0;
+  z-index: 1;
+}
+
+.accessibilityCard {
+  will-change: transform, opacity;
+  transform: translateY(100px);
+}
+
+.accessibilityCard {
+  position: relative;
+  top: 300px;
+}
+
+.secondCard {
+  position: relative;
+  top: 520px;
+  z-index: 40 !important;
+}
+
+.thirdCard {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+}
+
+.accessCardSubtitles {
+  background-image: url("@/assets/img/bgAccesCards.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.accessCardSubtitle {
+  display: inline-flex;
+  padding: 11px 24px 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 112.5% */
+}
+
+.firstSub {
+  background: #f36ec2;
+  color: #572728;
+  position: relative;
+  left: 20px;
+}
+
+.secSub {
+  color: #555727;
+  background: #eef36e;
+  position: relative;
+  right: 40px;
+}
+
+.thirdSub {
+  color: #572756;
+  background: #b56ef3;
+  position: relative;
+  right: 3px;
+}
+
+.firstSubSecCard {
+  background: #f3b56e;
+  color: #573f27;
+  position: relative;
+  left: 30px;
+}
+
+.secSubSecCard {
+  color: #575327;
+  background: #f3e86e;
+  position: relative;
+  right: 40px;
+}
+
+.thirdSubSecCard {
+  color: #274a57;
+  background: #6ef3e8;
+  position: relative;
+  left: 25px;
+}
+
+.firstSubThiCard {
+  background: #776ef3;
+  color: #372757;
+  position: relative;
+  left: 30px;
+}
+
+.secSubThiCard {
+  color: #27573d;
+  background: #91f36e;
+  position: relative;
+  right: 40px;
+}
+
+.thirdSubThiCard {
+  color: #6ef3ec;
+  background: #274157;
+  position: relative;
+  left: 25px;
+}
+
+.accessCardTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.accessCardTitle {
+  color: #fff;
+  font-family: "TeX Gyre Adventor";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 20px; /* 111.111% */
+}
+
+.accessCardText {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 112.5% */
+  width: 100%;
+  max-width: 300px;
+}
+
+.fix-wrapper {
+  position: relative;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 1600px) {
+  .accessibilityCard {
+    position: relative;
+    top: 400px;
+  }
+
+  .secondCard {
+    position: relative;
+    top: 620px;
+    z-index: 40 !important;
+  }
+
+  .thirdCard {
+    position: absolute;
+    top: 350px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .accessibilityTitle {
+    font-size: 85px;
+    width: 900px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .accessibilityTitle {
+    font-size: 70px;
+    width: 700px;
+    line-height: 100%; /* 100% */
+  }
+}
+
+@media (max-width: 768px) {
+  .accessibilityTitle {
+    font-size: 55px;
+    width: 450px;
+  }
+
+  .accessibilityCard {
+    padding: 8px 8px 24px 8px;
+    width: 100%;
+    max-width: 343px;
+    align-items: start;
+  }
+
+  .accessibilityTexts {
+    padding-top: 0;
+  }
+
+  .accessibility {
+    padding: 72px 16px 64px 16px;
+    box-sizing: border-box;
+  }
+
+  .accessibilityCard {
+    top: 0;
+    position: absolute;
+  }
+
+  .thirdCard {
+    top: 0;
+    right: auto;
+  }
+
+  .secondCard {
+    top: 0;
+  }
+
+  .accessCardTexts {
+    padding-left: 16px;
+  }
+
+  .accessibility::before {
+    content: "";
+    background: radial-gradient(
+      174.5% 89.33% at 51.05% 60.09%,
+      #0f0f0f 23.56%,
+      rgba(15, 15, 15, 0) 100%
+    );
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    z-index: 33;
+  }
+
+  .accessibilityTexts {
+    z-index: 66;
+    position: relative;
+  }
+}
+
+@media (max-width: 640px) {
+  .accessibilityTitle {
+    width: 300px;
+    font-size: 40px;
+  }
+
+  .accessibility {
+    padding: 72px 16px 64px 16px;
+  }
+}

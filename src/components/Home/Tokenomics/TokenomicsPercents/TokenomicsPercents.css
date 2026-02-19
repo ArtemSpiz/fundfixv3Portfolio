@@ -1,0 +1,218 @@
+.tokenomicsPercWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  justify-content: center;
+}
+
+.tokenomicsPercents {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.tokenomicsPercent {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  display: flex;
+  padding: 10px 16px;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tokenomicsPercentCircle {
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+.tokenomicsPercentTexts {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tokenomicsPercentTitle {
+  color: rgba(0, 0, 0, 0.48);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+
+.tokenomicsPercentSubtitle {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+}
+
+.tokenomicsArksWrap {
+  width: 800px;
+  height: 370px;
+  flex-shrink: 0;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.tokenomicsArksText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.tokenomicsArksTitle {
+  color: rgba(0, 0, 0, 0.48);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.tokenomicsArksSubtitle {
+  color: #000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 112.5% */
+}
+
+.tokenomicsArcGroup {
+  position: absolute;
+  right: 0%;
+  left: 0;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.tokenomicsArc {
+  height: 100%;
+  border-radius: 20px;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+.firstArk {
+  width: 811.995px;
+}
+
+.secArk {
+  width: 742.704px;
+}
+
+.thirdArk {
+  width: 658.257px;
+}
+
+.fourthArk {
+  width: 573.81px;
+}
+
+.fifthArk {
+  width: 491.527px;
+}
+
+.tokenomicsArksWrap {
+  position: relative;
+  margin-top: 40px;
+  pointer-events: none;
+}
+
+.tokenomicsArksText {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.tokenomicsArksTitle {
+  font-size: 16px;
+  color: #888;
+}
+
+.tokenomicsArksSubtitle {
+  font-size: 28px;
+  font-weight: 600;
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0px);
+}
+.fade-enter-from,
+.fade-leave-to {
+  transform: translateY(10px);
+}
+
+@media (max-width: 1285px) {
+  .tokenomicsPercents {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tokenomicsPercWrap {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tokenomicsArksWrap {
+    width: max-content;
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .tokenomicsArksWrap svg g use {
+    stroke-width: 12;
+  }
+
+  .tokenomicsArksText {
+    position: relative;
+    left: auto;
+    transform: translate(0);
+    bottom: 0;
+  }
+
+  .tokenomicsArksWrap {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tokenomicsPercents {
+    gap: 6px;
+  }
+
+  .tokenomicsPercent {
+    padding: 6px 16px;
+  }
+
+  .tokenomicsPercentSubtitle,
+  .tokenomicsPercentTitle {
+    font-size: 14px;
+  }
+}

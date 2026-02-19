@@ -1,0 +1,49 @@
+.popupWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background-image: url("@/assets/img/popupBuyBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.popup {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  padding: 4px;
+  width: 100%;
+  max-width: 620px;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .popupWrapper {
+    padding: 80px 16px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popupWrapper {
+    padding: 70px 16px;
+    padding-top: 120px;
+  }
+
+  .popup {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .popupWrapper {
+    padding: 64px 16px;
+    padding-top: 120px;
+  }
+}

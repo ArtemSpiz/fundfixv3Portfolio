@@ -1,0 +1,328 @@
+.pointBuy {
+  background-image: url("@/assets/img/pointBuyBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 96px 64px;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.pointBuyTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pointBuyTitle {
+  align-items: start;
+  text-align: start;
+  justify-content: start;
+  max-width: 500px;
+}
+
+.pointBuySubtitle {
+  max-width: 390px;
+  font-family: "Helvetica Now Display";
+  align-items: start;
+  text-align: start;
+  justify-content: start;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.pointBuyRightWrapper {
+  margin-right: 100px;
+  width: 423px;
+  height: 300px;
+  position: relative;
+}
+
+.pointBuyRight {
+  margin-right: 100px;
+  width: 423px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 24px;
+  background-color: #7ff498;
+  background-image: url("@/assets/img/bgRightPoint.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  z-index: 2;
+}
+
+.pointBuyRight::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid white;
+  border-radius: 24px;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.pointBuyRight:hover::before {
+  opacity: 0.6;
+  animation: pulsePointBuy 0.5s forwards ease-out;
+}
+
+@keyframes pulsePointBuy {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.07);
+    opacity: 0;
+  }
+}
+
+.pointBuyCardText {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pointBuyUnderTitle {
+  color: #0f0f0f;
+}
+
+.pointBuyCardTitle {
+  color: #0f0f0f;
+  font-family: "Helvetica Now Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 122.222% */
+  min-width: 296px;
+}
+
+.pointBuyCards {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+  width: 423px;
+}
+
+.pointBuyCardsScroll {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+  overflow: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0px 24px;
+}
+
+.pointBuyCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #0f0f0f;
+  width: 205px;
+  min-width: 205px;
+  scroll-snap-type: center;
+}
+
+.pointBuyCardImg {
+  width: 48px;
+  height: 48px;
+}
+
+.pointBuyCardTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.pointBuyCardName {
+  color: #fff;
+  font-family: "Helvetica Now Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+}
+
+.pointBuyCardMoney {
+  color: #7ff498;
+  font-family: "Helvetica Now Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+}
+
+.pointBuySubtitles {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.pointBuyCardSubtitle {
+  position: absolute;
+  display: inline-flex;
+  padding: 16px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+
+  color: #0f0f0f;
+  font-family: "Helvetica Now Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out;
+  animation: premiumFloat 4s ease-in-out infinite;
+}
+
+@keyframes premiumFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-4px) scale(1.02);
+  }
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+  75% {
+    transform: translateY(4px) scale(0.98);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.pointBuyCardSubtitle.inactive {
+  opacity: 0;
+  transform: translateZ(50px) scale(0.8);
+  filter: blur(6px);
+  z-index: -1;
+}
+
+.pointBuyCardSubtitle.active {
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+  filter: blur(0);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+  z-index: 9;
+}
+
+.pointBuyCardSubtitleCircle {
+  width: 16px;
+  height: 16px;
+  background: #0f0f0f;
+  border-radius: 50%;
+}
+
+.pointBuySubtitlesMob {
+  display: none;
+}
+
+@media (max-width: 1285px) {
+  .pointBuy {
+    padding: 80px 50px;
+  }
+
+  .pointBuyRight {
+    margin-right: 0;
+    width: 343px;
+  }
+
+  .pointBuyCards {
+    width: 343px;
+  }
+
+  .pointBuyRightWrapper {
+    margin-right: 50px;
+    width: 343px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pointBuy {
+    padding: 70px 40px;
+  }
+
+  .pointBuyTitle {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pointBuySubtitle {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pointBuy {
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pointBuyTexts {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .pointBuyRightWrapper {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .pointBuy {
+    padding: 64px 20px;
+  }
+
+  .pointBuySubtitlesWrap {
+    position: relative;
+    height: 230px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .pointBuySubtitles {
+    display: none;
+  }
+
+  .pointBuySubtitlesMob {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .pointBuy {
+    padding: 64px 16px;
+  }
+  .pointBuyRightWrapper,
+  .pointBuyRight {
+    height: 258px;
+    box-sizing: border-box;
+  }
+}

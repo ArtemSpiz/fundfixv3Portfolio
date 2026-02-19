@@ -1,0 +1,273 @@
+.tokenomicsCards {
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+  z-index: 44;
+  padding: 0px 100px;
+}
+
+.tokenomicsCardsScroll {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tokenomicsCardWrapper {
+  display: flex;
+  flex: 1 0 0;
+  height: 250px;
+  min-width: 240px;
+  max-width: 240px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: #e0e0e0;
+  box-sizing: border-box;
+}
+
+.tokenomicsCard {
+  box-sizing: border-box;
+  padding: 22px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: #050914;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.BgTokCards {
+  position: absolute;
+  pointer-events: none;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.tokenomicsCardTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tokenomicsCardTitle {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.tokenomicsCardBottom {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.tokenomicsCardSubtitlesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tokenomicsCardSubtitles {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.tokenomicsCardSubtitle {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: "Helvetica Now Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+
+.tokenomicsCardText {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+}
+
+.tokenomicsCardLine {
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tokenomicsCardsBtns {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .tokenomicsCardsScroll {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px;
+  }
+
+  .tokenomicsCardWrapper.centeredCardsSec,
+  .tokenomicsCardWrapper.centeredCards {
+    position: relative;
+    right: -50%;
+  }
+
+  .tokenomicsCardWrapper {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tokenomicsCardWrapper {
+    height: 152px;
+    flex: 0 0 343px;
+    min-width: 343px;
+  }
+
+  .tokenomicsCards {
+    padding: 0;
+    display: flex;
+  }
+
+  .tokenomicsCardsScroll {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 16px;
+    scroll-behavior: smooth;
+    padding: 0px;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .tokenomicsCardWrapper.centeredCardsSec,
+  .tokenomicsCardWrapper.centeredCards {
+    position: relative;
+    right: 0%;
+  }
+
+  .BgTokCards {
+    height: 110%;
+  }
+
+  .tokenomicsCardsBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tokenomicsCardsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .tokenomicsCardsArrow {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    border-radius: 24px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .tokenomicsCardsArrow.left {
+    rotate: 180deg;
+    background-color: #f1f1f1;
+  }
+
+  .tokenomicsCardsArrow.left svg path {
+    stroke: #151515;
+  }
+
+  .tokenomicsCardsArrow {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    overflow: visible;
+    transition: transform 0.3s;
+  }
+
+  .tokenomicsCardsArrow:hover {
+    animation: jellyBounce 0.6s ease-in-out;
+  }
+
+  .tokenomicsCardsArrow::before,
+  .tokenomicsCardsArrow::after {
+    border-radius: 30px;
+    content: "";
+    position: absolute;
+    border: 0.5px solid #151515;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: -2;
+    display: none;
+  }
+
+  .tokenomicsCardsArrow:hover::before,
+  .tokenomicsCardsArrow:hover::after {
+    animation: pulseWaveToc 1s infinite ease-out;
+    display: flex;
+  }
+
+  .tokenomicsCardsArrow::after {
+    animation-delay: 1s;
+  }
+
+  @keyframes pulseWaveToc {
+    0% {
+      transform: translate(-50%, -50%) scaleX(0.9) scaleY(0.9);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+      opacity: 0;
+    }
+  }
+
+  .tokenomicsCardsScroll:first-child {
+    padding-left: 50px;
+  }
+
+  .tokenomicsCardsScroll:last-child {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tokenomicsCardsScroll:first-child {
+    padding-left: 16px;
+  }
+
+  .tokenomicsCardsScroll:last-child {
+    padding-right: 16px;
+  }
+}

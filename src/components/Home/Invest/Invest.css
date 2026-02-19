@@ -1,0 +1,371 @@
+.invest {
+  padding: 148px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("@/assets/img/InvestBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #0f0f0f;
+}
+
+.investTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.investTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.investTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "TeX Gyre Adventor";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 96px; /* 100% */
+  width: 100%;
+  max-width: 946px;
+}
+
+.investBtn {
+  display: flex;
+  width: 204px;
+  height: 60px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #eec1be 0%, #94a0e8 100%);
+  border: none;
+
+  color: #000;
+  font-family: "Helvetica Now Display";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+}
+
+.investCards {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.investCardWrapper {
+  border-radius: 28px;
+  background: linear-gradient(95deg, #ea9036 2.24%, #fff58c 83.45%);
+  height: 342px;
+  width: max-content;
+  padding-right: 8px;
+}
+
+.investCardWrapper.sec {
+  background: linear-gradient(95deg, #6dbdff 2.24%, #3affc7 83.45%);
+}
+
+.investCardWrapper.third {
+  background: linear-gradient(95deg, #d069ff 2.24%, #7782ff 83.45%);
+}
+
+.investCardWrapper.fourth {
+  background: linear-gradient(95deg, #ff1d1d 2.24%, #ff9eb6 83.45%);
+}
+
+.investCard {
+  border-radius: 18px;
+  background: linear-gradient(180deg, #333 0%, #1a1a1a 100%);
+  width: max-content;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  gap: 66px;
+  display: flex;
+  align-items: start;
+}
+
+.investCardContent {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  justify-content: end;
+  align-items: center;
+  padding: 40px 32px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.investCardImg {
+  width: 120px;
+  height: 119.057px;
+  pointer-events: none;
+}
+
+.investCardImg.sec {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  margin-bottom: 40px;
+}
+
+.investCardImg.third {
+  width: 148px;
+  height: 138px;
+  flex-shrink: 0;
+}
+
+.investCardImg.fourth {
+  width: 145px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.investCardTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.investCardTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "TeX Gyre Adventor";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 116.667% */
+}
+
+.investCardSubtitle {
+  color: rgba(255, 255, 255, 0.48);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 122.222% */
+  max-width: 345px;
+}
+
+.investCardNum {
+  margin-top: 16px;
+  margin-right: 16px;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+  border-radius: 50%;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Helvetica Now Display";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 109.091% */
+}
+
+.investCardsWrapper {
+  touch-action: none;
+  user-select: none;
+  transition: none;
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.investCards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.investCardWrapper {
+  position: absolute;
+  transition: all 0.5s ease-out;
+  transform-origin: center;
+}
+
+.investCardWrapper.activeCard {
+  z-index: 100;
+}
+
+.investCard {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.investCardsPags {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 200;
+}
+
+.investCardsPag {
+  width: 52px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.investCardsPag:hover {
+  animation: jellyBounce 0.6s ease-in-out;
+}
+
+.investCardsPag.active {
+  background: #fff;
+}
+
+.investCardTitlesMobile {
+  display: none;
+}
+
+@media (max-width: 1285px) {
+  .investTitle {
+    font-size: 85px;
+  }
+
+  .investCard {
+    gap: 20px;
+  }
+
+  .invest {
+    padding: 100px 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .investTitle {
+    font-size: 70px;
+    line-height: 100%; /* 100% */
+  }
+
+  .invest {
+    padding: 90px 16px;
+  }
+
+  .investCardNum {
+    display: none;
+  }
+
+  .investCardWrapper {
+    padding-right: 0;
+    padding-top: 5px;
+    border-radius: 24px;
+    height: 325px;
+  }
+
+  .investCardTitlesMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    justify-content: start;
+    padding-inline: 16px;
+  }
+
+  .investCardTitlesDesktop {
+    display: none;
+  }
+
+  .investCard {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .investCardContent {
+    width: 100%;
+    height: 193px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .investCardImg.sec {
+    margin-bottom: 0px;
+    width: 224px;
+  }
+
+  .investCardTitle {
+    text-align: start;
+  }
+
+  .investCardSubtitle {
+    text-align: start;
+  }
+
+  .investCardsWrapper {
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .invest {
+    padding: 80px 16px 48px 16px;
+  }
+
+  .investCardTitle {
+    font-size: 20px;
+  }
+
+  .investCardSubtitle {
+    font-size: 16px;
+  }
+
+  .investTitle {
+    font-size: 55px;
+  }
+
+  .investBtn {
+    width: 204px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 640px) {
+  .invest {
+    padding: 72px 16px 48px 16px;
+  }
+
+  .investCardsPags {
+    bottom: 0;
+  }
+
+  .investCardsWrapper {
+    height: 520px;
+  }
+  .investCardWrapper {
+    max-width: 343px;
+  }
+  .investTitle {
+    font-size: 40px;
+  }
+}

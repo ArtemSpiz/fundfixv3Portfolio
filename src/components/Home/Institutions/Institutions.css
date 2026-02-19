@@ -1,0 +1,204 @@
+.institutionsWrapper {
+  background-image: url("@/assets/img/InstitutionsBg.png"),
+    linear-gradient(to bottom, rgba(15, 15, 15, 0) 0%, rgba(15, 15, 15, 1) 20%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.institutions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 117px;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.institutionsCard {
+  max-width: 709px;
+  width: 100%;
+  padding: 32px 0px;
+  border-radius: 18px;
+  background-image: linear-gradient(180deg, #e7bfc1 0%, #94a0e8 100%),
+    url("@/assets/img/bgCardInstitutions.png");
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+.institutionsLogoLeft {
+  position: absolute;
+  width: 224.336px;
+  height: 187.257px;
+  left: -130px;
+  top: 70px;
+}
+
+.institutionsLogoRight {
+  position: absolute;
+  width: 316.382px;
+  height: 271.539px;
+  right: -170px;
+  top: 10px;
+}
+
+.institutionsTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.institutionsTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.institutionsUnderTitle {
+  color: #0f0f0f;
+}
+
+.institutionsTitle {
+  color: #0f0f0f;
+  text-align: center;
+  font-family: "Helvetica Now Display";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 118.75% */
+  max-width: 440px;
+}
+
+.institutionsSubtitle {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 133.333% */
+  max-width: 440px;
+}
+
+.institutionsBtn {
+  display: flex;
+  width: 204px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #0f0f0f;
+  gap: 8px;
+  color: #97a1e7;
+  font-family: "Helvetica Now Display";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.institutionsBtn::before,
+.institutionsBtn::after {
+  border: 0.5px solid #0f0f0f !important;
+}
+
+.institutionsBtn svg path {
+  stroke: #97a1e7;
+}
+
+.instTitleMobil {
+  display: none;
+}
+
+@media (max-width: 1285px) {
+  .institutions {
+    padding: 0px 90px;
+    padding-bottom: 60px;
+  }
+
+  .institutionsCard {
+    z-index: 33;
+  }
+}
+
+@media (max-width: 1024px) {
+  .institutions {
+    padding: 0px 70px;
+    padding-bottom: 80px;
+  }
+
+  .institutionsSubtitle {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .institutions {
+    padding: 0px 50px;
+    padding-bottom: 60px;
+  }
+
+  .institutionsTexts {
+    gap: 24px;
+  }
+
+  .institutionsCard {
+    gap: 68px;
+  }
+
+  .instTitleDesktop {
+    display: none !important;
+  }
+
+  .instTitleMobil {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .institutionsTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .institutions {
+    padding: 0px 16px;
+    padding-bottom: 48px;
+  }
+
+  .institutionsLogoRight {
+    width: 224.336px;
+    height: 187.259px;
+    flex-shrink: 0;
+    top: -25px;
+  }
+
+  .institutionsLogoLeft {
+    left: -160px;
+    top: 210px;
+  }
+
+  .institutionsCard {
+    box-sizing: border-box;
+  }
+
+  .institutionsTitle {
+    font-size: 28px;
+  }
+}

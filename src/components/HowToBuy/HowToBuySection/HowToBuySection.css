@@ -1,0 +1,258 @@
+.howBuy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("@/assets/img/howToBuyBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 96px 64px;
+  gap: 64px;
+}
+
+.howBuyTexts {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.howBuyTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.howBuyTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "TeX Gyre Adventor";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px; /* 100% */
+}
+
+.howBuySubtitle {
+  max-width: 695px;
+  color: rgba(255, 255, 255, 0.56);
+  text-align: center;
+  font-family: "Helvetica Now Display";
+}
+
+.howBuyCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.howBuyCards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.howBuyCardWrapper {
+  display: flex;
+  max-width: 319px;
+  min-width: 300px;
+  flex: 1 0 0;
+  width: 100%;
+  padding-top: 6px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: linear-gradient(95deg, #6dbdff 2.24%, #3affc7 83.45%);
+}
+
+.howBuyCardWrapper.sec {
+  background: linear-gradient(95deg, #ffea71 2.24%, #ca8f10 83.45%);
+}
+
+.howBuyCardWrapper.third {
+  background: linear-gradient(95deg, #f3a8ff 2.24%, #6b26f6 83.45%);
+}
+
+.howBuyCardWrapper.fourth {
+  background: linear-gradient(95deg, #ff8570 2.24%, #ff4e4e 83.45%);
+}
+
+.howBuyCard {
+  border-radius: 24px;
+  background: #272727;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px 20px 8px;
+}
+
+.howBuyCardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.howBuyCardImg {
+  border-radius: 16px;
+  background: #0f0f0f;
+  overflow: hidden;
+}
+
+.howBuyCardText {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-items: center;
+}
+
+.howBuyCardTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "TeX Gyre Adventor";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 122.222% */
+}
+
+.howBuyCardSubtitle {
+  color: rgba(255, 255, 255, 0.48);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 137.5% */
+}
+
+.howBuyCardNum {
+  display: flex;
+  width: 64px;
+  padding: 9px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  background: #0f0f0f;
+
+  color: rgba(255, 255, 255, 0.48);
+  font-family: "Helvetica Now Display";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 137.5% */
+}
+
+.howBuyCardsPags {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.howBuyCardsPag {
+  width: 52px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.howBuyCardsPag.active {
+  background: #fff;
+}
+
+.howBuyCardsPag:hover {
+  animation: jellyBounce 0.6s ease-in-out;
+}
+
+@media (max-width: 1285px) {
+  .howBuyCard {
+    gap: 24px;
+  }
+
+  .howBuy {
+    padding: 80px 50px;
+  }
+
+  .howBuyTitle {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .howBuyTitle {
+    font-size: 60px;
+  }
+
+  .howBuy {
+    padding: 70px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .howBuyTitle {
+    font-size: 50px;
+  }
+
+  .howBuy {
+    padding: 64px 20px;
+  }
+
+  .howBuyCardsPags {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .howBuyCardsWrapper {
+    height: 450px;
+    touch-action: none;
+    user-select: none;
+    transition: none;
+  }
+
+  .howBuy {
+    gap: 96px;
+  }
+
+  .howBuyTexts {
+    gap: 24px;
+  }
+
+  .howBuyCardWrapper {
+    max-width: 343px;
+    width: 343px;
+  }
+
+  .howBuyCardTop {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .howBuyTitle {
+    font-size: 40px;
+  }
+
+  .howBuy {
+    padding: 64px 16px;
+  }
+}

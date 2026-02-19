@@ -1,0 +1,291 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  background-image: url("@/assets/img/heroBg.png");
+  background-color: #0f0f0f;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+  gap: 100px;
+  max-height: 1100px;
+}
+
+.heroShadow {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  z-index: 33;
+  height: 400px;
+}
+
+.heroShadow path {
+  width: 100vw;
+}
+
+.heroTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  position: relative;
+  z-index: 33;
+}
+
+.heroTitleWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "TeX Gyre Adventor";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 100% */
+  width: 100%;
+}
+
+.heroSubtitle {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+}
+
+.heroBtn {
+  display: flex;
+  width: 204px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #eec1be 0%, #94a0e8 100%);
+  gap: 8px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  border: 4px;
+  border-color: #000000;
+  line-height: 16px; /* 100% */
+  position: relative;
+}
+
+.heroBottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.32);
+  text-align: center;
+  font-family: "Helvetica Now Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 50;
+}
+
+.heroCards {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 32px;
+
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.heroCard {
+  position: relative;
+  width: 150px;
+  height: 160px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  transform-style: preserve-3d;
+  transition: transform 1.2s ease-in-out, top 1.2s ease, left 1.2s ease,
+    opacity 1.2s ease, all 0.9s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.heroCard img {
+  border-radius: 18px;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.heroCard.loaded {
+  opacity: 1;
+  scale: 1;
+}
+
+.heroBtn {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.heroBtn.loaded {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.heroCard.active {
+  height: 185px;
+  width: 195px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(21.147891998291016px);
+  transform-style: preserve-3d;
+}
+
+.heroCardInner {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  height: 100%;
+}
+
+.heroCardImg {
+  box-sizing: border-box;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroCardImg,
+.heroCardInner {
+  transform: rotate(-var(--angle));
+}
+
+.heroCardContent {
+  position: absolute;
+  display: inline-flex;
+  padding: 12px 32.002px 12px 16px;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  gap: 9px;
+  bottom: -20px;
+  left: -30px;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.heroCardContent.active {
+  opacity: 1;
+}
+
+.heroCardContIcon {
+  width: 19px;
+  height: 19px;
+}
+
+.heroCardTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.heroCardContTitle {
+  color: #fff;
+  text-align: center;
+  font-family: "Inter Tight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+
+.heroCardContSubtitle {
+  color: rgba(255, 255, 255, 0.48);
+  text-align: center;
+  font-family: "Inter Tight";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+@media (min-width: 1600px) {
+  .heroCard {
+    position: relative;
+    width: 220px;
+    height: 240px;
+  }
+
+  .hero::after,
+  .hero::before {
+    content: none;
+    background: none;
+    height: 0;
+  }
+
+  .heroCard.active {
+    height: 255px;
+    width: 275px;
+  }
+}
+@media (max-width: 1285px) {
+  .heroCards {
+    top: 0;
+  }
+
+  .heroTitle {
+    font-size: 100px;
+    line-height: 100%;
+  }
+
+  .heroSubtitle {
+    max-width: 356px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 80px;
+    line-height: 100%; /* 100% */
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 70px;
+  }
+  .heroTexts {
+    gap: 24px;
+  }
+
+  .heroBtn {
+    width: 204px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 55px;
+  }
+
+  .hero {
+    padding: 0px 16px;
+  }
+}
